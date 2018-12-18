@@ -4,8 +4,6 @@
 library(ggplot2)
 library(lme4)
 library(MASS)
-library(lmtest)
-library(olsrr)
 library(estimatr)
 library(hcci)
 
@@ -264,6 +262,9 @@ CiSim2(1000, .05, 100)
 
 n<-30
 k<-30
+icc <- 0.7
+b1 <- 0.5
+
 
 CiSim2<-function(p,alpha,m,...){
   #p - sample size
